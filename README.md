@@ -1,7 +1,3 @@
-# se.de_eventcontent
-
-
-
 Event Content
 ============
 
