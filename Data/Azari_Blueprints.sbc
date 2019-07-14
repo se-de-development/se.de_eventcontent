@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>composite_plate_dummy</SubtypeId>
+      </Id>
+      <DisplayName>Heavy composite Plate</DisplayName>
+      <Icon>Textures\Icons\azari_plate.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="composite_plate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="composite_plate" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_smallcannon_clip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Railgun Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="lanthan_smallcannon_clip" />
+      </Prerequisites>
+      <Result Amount="0.15" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_pointdefense_clip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Pointdefense Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="lanthan_pointdefense_clip" />
+      </Prerequisites>
+      <Result Amount="0.1" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_fusion_clip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Fusioncharge Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="Azari_fusion_clip" />
+      </Prerequisites>
+      <Result Amount="0.1" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_antiair_clip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Antiair Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="Azari_antiair_clip" />
+      </Prerequisites>
+      <Result Amount="0.1" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_heavycannon_clip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Cannon Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="lanthan_heavycannon_clip" />
+      </Prerequisites>
+      <Result Amount="0.25" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_Azari_Pulserifle</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Pulserifle</DisplayName>
+      <Icon>Textures\GUI\Icons\Azari_Pulserifle4.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Azari_Pulserifle" />
+      </Prerequisites>
+      <Result Amount="10" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_Azari_Dogtag</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari DogTag</DisplayName>
+      <Icon>Textures\GUI\Icons\dogtag_pilot_glow.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Azari_dogtag" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="Nadium" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+	<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Trade_Azari_Chip</SubtypeId>
+      </Id>
+      <DisplayName>Trade Azari Weapon Controlchip</DisplayName>
+      <Icon>Textures\GUI\Icons\chip.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Azari_Controlchip" />
+      </Prerequisites>
+      <Result Amount="6" TypeId="Component" SubtypeId="Nadium_Crystal" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+  </Blueprints>
+</Definitions>

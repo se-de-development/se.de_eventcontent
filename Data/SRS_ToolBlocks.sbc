@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+	<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+      <Id>
+        <TypeId>Assembler</TypeId>
+        <SubtypeId>SRS_Advanced_Assembler</SubtypeId>
+      </Id>
+      <DisplayName>SRS Advanced Assembler</DisplayName>
+      <Icon>Textures\GUI\Icons\HSR_Assembler.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="3" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\HSR\K_HSR_Assembler_Large.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="150" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>SRS_Advanced_Assembler</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>80</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>2</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+	  <AssemblySpeed>10</AssemblySpeed>
+       <BlueprintClasses>
+        <Class>Event_Assembler</Class>
+      </BlueprintClasses>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>K_Assembler_Idle</PrimarySound>
+      <ActionSound>K_AssemblerDone</ActionSound>
+      <DestroyEffect>Explosion_Missile</DestroyEffect>
+      <DestroySound>WepSmallMissileExpl</DestroySound>
+    </Definition>
+    <Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+      <Id>
+        <TypeId>Assembler</TypeId>
+        <SubtypeId>Event_Assembler</SubtypeId>
+      </Id>
+      <DisplayName>Event Assembler</DisplayName>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <Icon>Textures\GUI\Icons\Cubes\event_assembler.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\EventAssembler.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\EventAssembler_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\EventAssembler_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\EventAssembler_3.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+        <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+      </MountPoints>
+      <BlockPairName>Event_Assembler</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>1</InventoryMaxVolume>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.01</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.10</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Event_Assembler</Class>
+      </BlueprintClasses>
+      <RefineSpeed>1</RefineSpeed>
+      <MaterialEfficiency>1.0</MaterialEfficiency>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <PrimarySound>BlockAirVentIdle</PrimarySound>
+      <ActionSound>SmShipLrgJet</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>75</PCU>
+    </Definition>
+	<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
+      <Id>
+        <TypeId>LaserAntenna</TypeId>
+        <SubtypeId>Azari_dst</SubtypeId>
+      </Id>
+      <DisplayName>Deep Space Transceiver</DisplayName>
+      <Icon>Textures\Darth_Biomech\GUI\humongous_antenna.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="7" y="9" z="7" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Darth_Biomech\HumongousAntennaBase.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="7" EndY="7" />
+      </MountPoints>
+	  
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.3" File="models\Darth_Biomech\HumongousAntennaBase_progress_00.mwm"/>
+        <Model BuildPercentUpperBound="0.55" File="models\Darth_Biomech\HumongousAntennaBase_progress_01.mwm"/>
+        <Model BuildPercentUpperBound="0.8" File="models\Darth_Biomech\HumongousAntennaBase_progress_02.mwm"/>
+        <Model BuildPercentUpperBound="1.0" File="models\Darth_Biomech\HumongousAntennaBase_progress_03.mwm"/>
+      </BuildProgressModels>
+	  
+      <BlockPairName>Azari_dst</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>140</BuildTimeSeconds>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+	  
+      <PowerInputIdle>0.5</PowerInputIdle>
+      <PowerInputTurning>70</PowerInputTurning>
+      <PowerInputLasing>3</PowerInputLasing>
+      <RotationRate>0.00005</RotationRate>
+      <MaxRange>2000000000</MaxRange>
+	  
+      <MinElevationDegrees>33</MinElevationDegrees> 
+      <MaxElevationDegrees>180</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RequireLineOfSight>false</RequireLineOfSight>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+    </Definition>
+</CubeBlocks>
+</Definitions>

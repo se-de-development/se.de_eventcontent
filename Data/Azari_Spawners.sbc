@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+      <Id>
+        <TypeId>Projector</TypeId>
+        <SubtypeId>Azari_Shipspawner</SubtypeId>
+      </Id>
+      <DisplayName>Azari Spawner</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Projector.dds</Icon>
+      <Description>Spawns objects on Demand</Description>
+      <CubeSize>Large</CubeSize>
+	  	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Projector.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="150" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+	<MountPoints>
+        <MountPoint Side="Bottom" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" Default="true" />
+        <MountPoint Side="Back" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" />
+        <MountPoint Side="Front" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" />
+        <MountPoint Side="Left" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" />
+        <MountPoint Side="Right" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" />
+        <MountPoint Side="Top" StartX="0.33" StartY="0.33" EndX="0.66" EndY="0.66" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\ProjectorConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\ProjectorConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ProjectorConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Azari_Shipspawner</BlockPairName>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <RequiredPowerInput>0.0002</RequiredPowerInput>
+      <PrimarySound>BlockProjectorOn</PrimarySound>
+      <IdleSound>BlockProjectorOff</IdleSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <DestroyEffectOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>1.1</Z>
+      </DestroyEffectOffset>
+      <PCU>5</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  </CubeBlocks>
+</Definitions>

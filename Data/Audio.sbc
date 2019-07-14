@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sounds>
+  <!-- Explosions Sounds -->
+   	<Sound>
+	  <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>explosion_big_006</SubtypeId>
+      </Id>
+       <Category>BLOCK</Category>
+      <MaxDistance>2000</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>false</Loopable>
+		<Waves>
+			<Wave Type="D3">
+				<Start>Audio\explosion_big_006.wav</Start>
+			</Wave>
+		</Waves>
+     </Sound>
+   	<Sound>
+	  <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>explosion_big_004</SubtypeId>
+      </Id>
+       <Category>BLOCK</Category>
+      <MaxDistance>2000</MaxDistance>
+      <Volume>0.8</Volume>
+      <Loopable>false</Loopable>
+		<Waves>
+			<Wave Type="D3">
+				<Start>Audio\explosion_big_004.wav</Start>
+			</Wave>
+		</Waves>
+     </Sound>
+   	<Sound>
+	  <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>explosion_big_engine</SubtypeId>
+      </Id>
+       <Category>BLOCK</Category>
+      <MaxDistance>2000</MaxDistance>
+      <Volume>0.8</Volume>
+      <Loopable>false</Loopable>
+		<Waves>
+			<Wave Type="D3">
+				<Start>Audio\explosion_big_engine.wav</Start>
+			</Wave>
+		</Waves>
+     </Sound>
+ <!-- Landingpad -->
+     <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>event_lockFail</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>17</MaxDistance>
+      <Volume>0.610946834</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\event_lockFail.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound> 
+     <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>event_lockOpen</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>17</MaxDistance>
+      <Volume>0.610946834</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\event_lockOpen.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound> 
+     <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>event_lockClose</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>17</MaxDistance>
+      <Volume>0.610946834</Volume>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\event_lockClose1.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\event_lockClose2.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\event_lockClose3.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+ 
+ <!-- Machine Sounds -->
+ 	<Sound>
+	  <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>K_Assembler_Idle</SubtypeId>
+      </Id>
+       <Category>BLOCK</Category>
+       <MaxDistance>13</MaxDistance>
+      <UpdateDistance>30</UpdateDistance>
+        <Volume>0.3</Volume>
+      <Loopable>true</Loopable>
+		<Waves>
+			<Wave Type="D3">
+				<Loop>Audio\HSRAssembleIdles.xwm</Loop>
+			</Wave>
+		</Waves>
+     </Sound>
+	<Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>K_AssemblerDone</SubtypeId>
+      </Id>
+      <Category>BLOCK</Category>
+       <MaxDistance>9</MaxDistance>
+      <UpdateDistance>30</UpdateDistance>
+        <Volume>0.6</Volume>
+      <Loopable>true</Loopable>
+		<Waves>
+			<Wave Type="D3">
+        		<Loop>Audio\AssemblerDone.xwm</Loop>
+			</Wave>
+		</Waves>
+    </Sound>
+ <!-- Weapon sounds -->
+ 
+      <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>weapon_cqbdefense_shot</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>400</MaxDistance>
+      <Volume>0.9</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>4</SoundLimit>	  
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\weapon_cqbdefense_sound\weapon_cqbdefense1.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\weapon_cqbdefense_sound\weapon_cqbdefense2.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\weapon_cqbdefense_sound\weapon_cqbdefense3.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+ 
+      <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>weapon_nova_shot</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>2000</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>4</SoundLimit>	  
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\weapon_nova_sound\weapon_nova_sound.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+ 
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>plasma</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>400</MaxDistance>
+      <Volume>0.8</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\wep_plasma2.xwm</Start>
+        </Wave>
+	   </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>plasma_heavy</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>400</MaxDistance>
+      <Volume>0.8</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\wep_plasma_heavy1.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>wep_antiair</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>800</MaxDistance>
+      <Volume>0.9</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\wep_antiair.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>plasma_pulse</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>400</MaxDistance>
+      <Volume>0.8</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\wep_plasma_pulse1.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>sys_power</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>100</MaxDistance>
+      <Volume>0.5</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>5</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\power_startup.wav</Start>
+          <Loop>Audio\power_loop.wav</Loop>
+		  <End>Audio\power_shutdown.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>scout_engine</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>700</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>5</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\scout_engine_startup.wav</Start>
+          <Loop>Audio\scout_engine_loop.wav</Loop>
+		  <End>Audio\scout_engine_shutdown.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>warship_engine</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>700</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>5</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\warship_engine_startup.wav</Start>
+          <Loop>Audio\warship_engine_loop.wav</Loop>
+		  <End>Audio\warship_engine_shutdown.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>cruiser_engine</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>700</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>5</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\carrier_engine_start.wav</Start>
+          <Loop>Audio\carrier_engine_loop.wav</Loop>
+		  <End>Audio\carrier_engine_shutdown.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>carrier_engine</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>700</MaxDistance>
+      <Volume>1</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>5</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\carrier_engine_start.wav</Start>
+          <Loop>Audio\carrier_engine_loop.wav</Loop>
+		  <End>Audio\carrier_engine_shutdown.wav</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>wep_beam</SubtypeId>
+      </Id>
+      <Category>WEP_SHIP</Category>
+      <MaxDistance>800</MaxDistance>
+      <Volume>0.9</Volume>
+      <Loopable>true</Loopable>
+	  <SoundLimit>4</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+		  <Start>Audio\wep_azari_beam_startup.xwm</Start>
+          <Loop>Audio\wep_azari_beam1.xwm</Loop>
+		  <End>Audio\wep_azari_beam_shutdown.xwm</End>
+        </Wave>
+      </Waves>
+    </Sound>
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>warp_out</SubtypeId>
+      </Id>
+      <Category>SHIP</Category>
+      <MaxDistance>1000</MaxDistance>
+      <Volume>0.9</Volume>
+      <Loopable>false</Loopable>
+	  <SoundLimit>4</SoundLimit>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\warp\warp2.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>Azari_DoorOpen</SubtypeId>
+      </Id>
+      <Category>DOOR</Category>
+      <MaxDistance>20</MaxDistance>
+      <Volume>0.85</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\SubmarineOpen.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+	
+    <Sound>
+      <Id>
+        <TypeId>AudioDefinition</TypeId>
+        <SubtypeId>Azari_DoorClose</SubtypeId>
+      </Id>
+      <Category>DOOR</Category>
+      <MaxDistance>20</MaxDistance>
+      <Volume>0.85</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\SubmarineClose.xwm</Start>
+        </Wave>
+      </Waves>
+    </Sound>	
+
+  </Sounds>
+</Definitions>

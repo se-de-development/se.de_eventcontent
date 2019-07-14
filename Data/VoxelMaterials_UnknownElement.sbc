@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VoxelMaterials>
+
+    <!-- "Talonit" based on AlienIce -->
+    <VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+      <Id>
+        <TypeId>VoxelMaterialDefinition</TypeId>
+        <SubtypeId>Unknown_Element</SubtypeId>
+      </Id>
+      <SpawnsInAsteroids>false</SpawnsInAsteroids>
+      <SpawnsFromMeteorites>false</SpawnsFromMeteorites>
+      <MaterialTypeName>Unknown Element</MaterialTypeName>
+      <!-- DEV: Scanner name -->
+      <MinedOre>Unknown_Element</MinedOre>
+      <!-- DEV: resource output on drilling -->
+      <!-- <MinedOreRatio>10</MinedOreRatio> -->
+      <!-- DEV: default 5 -->
+      <CanBeHarvested>true</CanBeHarvested>
+      <IsRare>true</IsRare>
+      <IsIndestructible>false</IsIndestructible>
+      <DamageRatio>1</DamageRatio>
+      <ParticleEffect>Collision_Meteor</ParticleEffect>
+
+      <VoxelHandPreview>Textures\Voxels\nadrit_thumbnail.dds</VoxelHandPreview>
+      <ColorMetalXZnY>Textures\Voxels\nadrit_cm.dds</ColorMetalXZnY>
+      <NormalGlossXZnY>Textures\Voxels\nadrit_ng.dds</NormalGlossXZnY>
+      <ExtXZnY>Textures\Voxels\nadrit_add.dds</ExtXZnY>
+
+      <SpecularPower>74</SpecularPower>
+      <SpecularShininess>0.364</SpecularShininess>
+
+      <ColorMetalXZnYFar1>Textures\Voxels\nadrit_cm.dds</ColorMetalXZnYFar1>
+      <NormalGlossXZnYFar1>Textures\Voxels\nadrit_ng.dds</NormalGlossXZnYFar1>
+      <ExtXZnYFar1>Textures\Voxels\nadrit_add.dds</ExtXZnYFar1>
+
+      <ColorMetalXZnYFar2>Textures\Voxels\nadrit_cm.dds</ColorMetalXZnYFar2>
+      <NormalGlossXZnYFar2>Textures\Voxels\nadrit_ng.dds</NormalGlossXZnYFar2>
+      <ExtXZnYFar2>Textures\Voxels\nadrit_add.dds</ExtXZnYFar2>
+
+      <ExtDetailScale>0.005</ExtDetailScale>
+      <Scale>20</Scale>
+      <Far1Distance>500</Far1Distance>
+      <Far2Distance>370</Far2Distance>
+      <Far1Scale>590</Far1Scale>
+      <Far2Scale>500</Far2Scale>
+
+      <Far3Distance>10000</Far3Distance>
+      <Far3Scale>1000</Far3Scale>
+      <Far3Color>
+        <X>0.096</X>
+        <Y>0.12</Y>
+        <Z>0.236</Z>
+        <W>1.0</W>
+      </Far3Color>
+
+      <BiomeValueMin>0</BiomeValueMin>
+      <BiomeValueMax>10</BiomeValueMax>
+
+      <Friction>0.25</Friction>
+      <Restitution>0.9</Restitution>
+
+      <ColorKey Hex="#BCBB56"/>
+      <LandingEffect>Landing_Jet_Ground_Snow</LandingEffect>
+    </VoxelMaterial>
+  </VoxelMaterials>
+</Definitions>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+	<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>Azari_nova</SubtypeId>
+      </Id>
+      <DisplayName>Azari Nova</DisplayName>
+      <Icon>Textures\GUI\Icons\HSR_Calamity.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>	  
+      <BlockTopology>TriangleMesh</BlockTopology>
+       <Size x="9" y="4" z="9" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\HSR\K_HS_Calamity_Large.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="10000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="9" EndY="9" />
+      </MountPoints>
+       <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Azari_nova</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="weapon_nova" />
+      <InventoryMaxVolume>1</InventoryMaxVolume>
+      <DamageEffectId>213</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>0</MinElevationDegrees> 
+      <MaxElevationDegrees>180</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0001</RotationSpeed>
+      <ElevationSpeed>0.0001</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>10000</MaxRangeMeters>
+      <MinFov>0.001</MinFov>
+      <MaxFov>2</MaxFov>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+    </Definition>
+  </CubeBlocks>
+   <Weapons> 
+	<Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>weapon_nova</SubtypeId>
+      </Id>
+      <MissileAmmoData RateOfFire="1" ShootSoundName="weapon_nova_shot" />
+      <DeviateShotAngle>0</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="weapon_nova_clip" />
+      </AmmoMagazines>
+	  <Effects>
+	  <Effect Action="Shoot" Dummy="muzzle_projectile_001" Particle="Azari_NOVA_shot" Loop="false" />
+        <Effect Action="Shoot" Dummy="muzzle_projectile_002" Particle="K_Railgun_Electrical_1" Loop="false" />
+		<Effect Action="Shoot" Dummy="muzzle_projectile_003" Particle="K_Railgun_Electrical_2" Loop="false" />
+		</Effects>
+      <ReloadTime>10000</ReloadTime>
+    </Weapon>
+  </Weapons>
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>weapon_nova_clip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Nova Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>8</Mass>
+      <Volume>8</Volume>
+      <Model>Models\Weapons\Ammo_Box.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="weapon_nova_projectile" />
+    </AmmoMagazine>
+  </AmmoMagazines>
+  <Ammos>
+    <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>weapon_nova_projectile</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>200</DesiredSpeed>
+        <SpeedVariance>5</SpeedVariance>
+        <MaxTrajectory>10000</MaxTrajectory>
+        <IsExplosive>true</IsExplosive>
+        <BackkickForce>10000</BackkickForce>
+        <PhysicalMaterial>Missile</PhysicalMaterial>
+      </BasicProperties>
+      <MissileProperties>
+        <MissileMass>1000</MissileMass>
+        <MissileExplosionRadius>100</MissileExplosionRadius>
+        <MissileModelName>Models\HeavySeries\K_HS_Executer_Shell_Large.mwm</MissileModelName>
+        <MissileAcceleration>100</MissileAcceleration>
+        <MissileInitialSpeed>200</MissileInitialSpeed>
+        <MissileSkipAcceleration>true</MissileSkipAcceleration>
+        <MissileExplosionDamage>100000</MissileExplosionDamage>
+      </MissileProperties>
+    </Ammo>
+  </Ammos> 
+</Definitions>

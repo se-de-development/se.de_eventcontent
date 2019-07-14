@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+	<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>Azari_antiair</SubtypeId>
+      </Id>
+      <DisplayName>Azari FLAK</DisplayName>
+      <Icon>Textures\Icons\CIV_Defense3.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+       <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Civ\K_Civ_Defense_3_Large.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="2" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+  <MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+	</MountPoints>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Azari_antiair</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="weapon_Azari_antiair" />
+      <InventoryMaxVolume>2</InventoryMaxVolume>
+      <DamageEffectId>213</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-5</MinElevationDegrees> 
+      <MaxElevationDegrees>80</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.002</RotationSpeed>
+      <ElevationSpeed>0.002</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1000</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+  </CubeBlocks>
+   <Weapons> 
+    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>weapon_Azari_antiair</SubtypeId>
+      </Id>
+      <MissileAmmoData RateOfFire="60" ShootSoundName="wep_antiair" ShotsInBurst="60" />
+      <ReleaseTimeAfterFire>250</ReleaseTimeAfterFire>
+	    <DeviateShotAngle>0.2</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>1000</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <UseDefaultMuzzleFlash>false</UseDefaultMuzzleFlash>
+      <Effects>
+        <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="BlockDestroyedExplosion_Small" Loop="false" InstantStop="false"/>
+      </Effects>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Azari_antiair_clip" />
+      </AmmoMagazines>
+      <ReloadTime>5000</ReloadTime>
+    </Weapon>
+  </Weapons>
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>Azari_antiair_clip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Antiair Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>8</Mass>
+      <Volume>8</Volume>
+      <Model>Models\Weapons\Ammo_Box.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>600</Capacity>
+      <AmmoDefinitionId Subtype="Azari_antiair_missle" />
+    </AmmoMagazine>
+  </AmmoMagazines>
+  <Ammos>
+    <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>Azari_antiair_missle</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>600</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1000</MaxTrajectory>
+        <IsExplosive>true</IsExplosive>
+        <BackkickForce>3000</BackkickForce>
+        <PhysicalMaterial>Missile</PhysicalMaterial>
+      </BasicProperties>
+      <MissileProperties>
+        <MissileMass>10</MissileMass>
+        <MissileExplosionRadius>3</MissileExplosionRadius>
+        <MissileModelName>Models\Cubes\Large\gblock01green.mwm</MissileModelName>
+        <MissileAcceleration>600</MissileAcceleration>
+        <MissileInitialSpeed>300</MissileInitialSpeed>
+        <MissileSkipAcceleration>true</MissileSkipAcceleration>
+        <MissileExplosionDamage>0</MissileExplosionDamage>
+      </MissileProperties>
+    </Ammo>
+  </Ammos> 
+</Definitions>

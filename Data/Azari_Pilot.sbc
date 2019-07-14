@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <CubeBlocks>
+
+	  <Definition xsi:type="MyObjectBuilder_RemoteControlDefinition">
+	  <Id>
+		<TypeId>RemoteControl</TypeId>
+		<SubtypeId>Azari_Pilot</SubtypeId>
+      </Id>
+	  <DisplayName>Azari Pilot</DisplayName>
+	  <Icon>Textures\GUI\Icons\Cubes\NPC_Weapons_Icon.dds</Icon>
+	  <Description>An optimally trained Azari combat pilot. Its a cloned Azarian brain in a exoskeleton.</Description>
+	  <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	 <Public>true</Public>
+	  <BlockTopology>TriangleMesh</BlockTopology>
+	  <Size x="1" y="1" z="1" />
+	  <ModelOffset x="0" y="0" z="0" />
+	  <Model>Models\Cubes\Large\NPC_Weapons_Large.mwm</Model>
+	  <UsesDeformation>false</UsesDeformation>
+	  <Components>
+        <Component Subtype="Azari_dogtag" Count="1" />
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="400" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+	  <MountPoints>
+		<MountPoint Side="Bottom" StartX="0.3" StartY="0.25" EndX="0.7" EndY="0.85" Default="true" />
+	  </MountPoints>
+	  <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\NPC_Weapons_Large_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\NPC_Weapons_Large_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\NPC_Weapons_Large_Constr3.mwm" />
+	  </BuildProgressModels>
+	  <BlockPairName>Azari_Pilot</BlockPairName>
+	  <VoxelPlacement>
+		<StaticMode>
+		  <PlacementMode>OutsideVoxel</PlacementMode>
+		  <MaxAllowed>0.2</MaxAllowed>
+		  <MinAllowed>0</MinAllowed>
+		</StaticMode>
+		<DynamicMode>
+		  <PlacementMode>OutsideVoxel</PlacementMode>
+		  <MaxAllowed>0.2</MaxAllowed>
+		  <MinAllowed>0</MinAllowed>
+		</DynamicMode>
+	  </VoxelPlacement>
+	  <MirroringZ>Y</MirroringZ>
+	  <MirroringY>Z</MirroringY>
+	  <BuildTimeSeconds>50</BuildTimeSeconds>
+	  <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <RequiredPowerInput>0.01</RequiredPowerInput>
+	  <EnableFirstPerson>false</EnableFirstPerson>
+      <EnableShipControl>true</EnableShipControl>
+      <EnableBuilderCockpit>false</EnableBuilderCockpit>
+      <IsPressurized>false</IsPressurized>
+      <DeformationRatio>0.2</DeformationRatio>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <PrimarySound>BlockCockpitLrg</PrimarySound>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <IsAirTight>false</IsAirTight>
+	  <PCU>15</PCU>
+	  </Definition>
+	</CubeBlocks>
+</Definitions>
+	

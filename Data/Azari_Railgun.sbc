@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+	<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>#lanthan_smallcannon</SubtypeId>
+      </Id>
+      <DisplayName>Azari Railgun</DisplayName>
+      <Icon>Textures\Icons\CIV_Defense2.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+       <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Civ\K_Civ_Defense_2_Large.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="5" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="450" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+ <MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" />
+	</MountPoints>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>#lanthan_smallcannon</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="weapon_lanthan_smallcannon" />
+      <InventoryMaxVolume>2</InventoryMaxVolume>
+      <DamageEffectId>213</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-5</MinElevationDegrees> 
+      <MaxElevationDegrees>25</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0002</RotationSpeed>
+      <ElevationSpeed>0.0002 </ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1800</MaxRangeMeters>
+      <MinFov>0.01</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+    </Definition>
+  </CubeBlocks>
+   <Weapons> 
+    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>weapon_lanthan_smallcannon</SubtypeId>
+      </Id>
+      <MissileAmmoData RateOfFire="30" ShootSoundName="plasma" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>125</ReleaseTimeAfterFire>
+	    <DeviateShotAngle>0.2</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>1000</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <UseDefaultMuzzleFlash>false</UseDefaultMuzzleFlash>
+      <Effects>
+        <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="BlockDestroyedExplosion_Small" Loop="false" InstantStop="false"/>
+      </Effects>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="lanthan_smallcannon_clip" />
+      </AmmoMagazines>
+      <ReloadTime>2000</ReloadTime>
+    </Weapon>
+  </Weapons>
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>lanthan_smallcannon_clip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Railgun Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>8</Mass>
+      <Volume>8</Volume>
+      <Model>Models\Weapons\Ammo_Box.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>100</Capacity>
+      <AmmoDefinitionId Subtype="lanthan_smallcannon_missle" />
+    </AmmoMagazine>
+  </AmmoMagazines>
+  <Ammos>
+    <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>lanthan_smallcannon_missle</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>400</DesiredSpeed>
+        <SpeedVariance>5</SpeedVariance>
+        <MaxTrajectory>1800</MaxTrajectory>
+        <IsExplosive>true</IsExplosive>
+        <BackkickForce>400</BackkickForce>
+        <PhysicalMaterial>Missile</PhysicalMaterial>
+      </BasicProperties>
+      <MissileProperties>
+        <MissileMass>10</MissileMass>
+        <MissileExplosionRadius>6</MissileExplosionRadius>
+        <MissileModelName>Models\Cubes\Large\gblock01blue.mwm</MissileModelName>
+        <MissileAcceleration>400</MissileAcceleration>
+        <MissileInitialSpeed>100</MissileInitialSpeed>
+        <MissileSkipAcceleration>true</MissileSkipAcceleration>
+        <MissileExplosionDamage>125</MissileExplosionDamage>
+      </MissileProperties>
+    </Ammo>
+  </Ammos> 
+</Definitions>

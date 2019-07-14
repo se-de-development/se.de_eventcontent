@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>Azari_Carrierengine</SubtypeId>
+      </Id>
+      <DisplayName>Azari Carrier Engine</DisplayName>
+      <Icon>Textures\GUI\Heli_full.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <Public>true</Public>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="15" y="15" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\Heli_full_x_large.mwm</Model>
+      <ThrusterType>Ion</ThrusterType>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.50" EndY="15.00" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="15.00" EndY="5.00" />
+		<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="5.00" EndY="15.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="12.50" EndX="15.00" EndY="15.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="12.50" EndX="15.00" EndY="15.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.50" EndY="15.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="15.00" EndY="2.50" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="15.00" EndY="2.50" />
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="15.00" EndY="5.00" />
+		<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="5.00" EndY="15.00" />
+		<MountPoint Side="Front" StartX="12.50" StartY="0.00" EndX="15.00" EndY="15.00" />
+		<MountPoint Side="Back" StartX="12.50" StartY="0.00" EndX="15.00" EndY="15.00" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\Heli_full_x_large_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\large\Heli_full_x_large_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\Heli_full_x_large_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Azari_Carrierengine</BlockPairName>
+      <Center x="7" y="7" z="2" />
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>900</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>10</ForceMagnitude>
+      <MaxPowerConsumption>0.000002</MaxPowerConsumption>
+      <MinPowerConsumption>0.000002</MinPowerConsumption>
+      <SlowdownFactor>1</SlowdownFactor>
+
+      <FlameDamageLengthScale>0</FlameDamageLengthScale>
+      <FlameLengthScale>3</FlameLengthScale>
+      <FlameDamage>0</FlameDamage>
+      <FlameIdleColor>
+        <X>0.95</X>
+        <Y>0.20</Y>
+        <Z>0.15</Z>
+        <W>0.75</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+        <X>0.95</X>
+        <Y>0.20</Y>
+        <Z>0.15</Z>
+        <W>0.75</W>
+      </FlameFullColor>
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>Flame_heli</FlameLengthMaterial>
+      <FlameGlareMaterial>GlareLsThrustSmall</FlameGlareMaterial>
+      <FlameVisibilityDistance>1000</FlameVisibilityDistance>
+      <FlameGlareSize>0.750</FlameGlareSize>
+      <FlameGlareQuerySize>4</FlameGlareQuerySize>
+      <PrimarySound>carrier_engine</PrimarySound>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_engine</DestroySound>
+    </Definition>
+
+
+    <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>Azari_Cruiserengine</SubtypeId>
+      </Id>
+      <DisplayName>Azari Cruiserengine</DisplayName>
+      <Icon>Textures\GUI\Heli_full.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <Public>true</Public>
+      <GuiVisible>false</GuiVisible>	  
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="9" y="9" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\Heli_full_large.mwm</Model>
+      <ThrusterType>Ion</ThrusterType>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+		<MountPoint Side="Back" StartX="7.50" StartY="0.00" EndX="9.00" EndY="9.00" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="9.00" EndY="3.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="7.50" EndX="9.00" EndY="9.00" />
+		<MountPoint Side="Front" StartX="7.50" StartY="0.00" EndX="9.00" EndY="9.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="9.00" EndY="1.50" />
+		<MountPoint Side="Back" StartX="0.00" StartY="7.50" EndX="9.00" EndY="9.00" />
+		<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="9.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="9.00" EndY="1.50" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.50" EndY="9.00" />
+		<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="9.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.50" EndY="9.00" />
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="9.00" EndY="3.00" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Heli_full_large_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Heli_full_large_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Heli_full_large_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Azari_Cruiserengine</BlockPairName>
+      <Center x="4" y="4" z="1" />
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>300</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>10</ForceMagnitude>
+      <MaxPowerConsumption>0.000002</MaxPowerConsumption>
+      <MinPowerConsumption>0.000002</MinPowerConsumption>
+      <SlowdownFactor>1</SlowdownFactor>
+
+      <FlameDamageLengthScale>0</FlameDamageLengthScale>
+      <FlameLengthScale>3</FlameLengthScale>
+      <FlameDamage>0</FlameDamage>
+      <FlameIdleColor>
+        <X>0.95</X>
+        <Y>0.00</Y>
+        <Z>0.00</Z>
+        <W>0.75</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+        <X>0.95</X>
+        <Y>0.00</Y>
+        <Z>0.00</Z>
+        <W>0.75</W>
+      </FlameFullColor>
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>Flame_heli</FlameLengthMaterial>
+      <FlameGlareMaterial>GlareLsThrustSmall</FlameGlareMaterial>
+      <FlameVisibilityDistance>1000</FlameVisibilityDistance>
+      <FlameGlareSize>0.750</FlameGlareSize>
+      <FlameGlareQuerySize>4</FlameGlareQuerySize>
+      <PrimarySound>cruiser_engine</PrimarySound>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_engine</DestroySound>
+    </Definition>
+
+
+ <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>Azari_Warshipengine</SubtypeId>
+      </Id>
+      <DisplayName>Azari Warshipengine</DisplayName>
+      <Icon>Textures\GUI\Heli_full.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <Public>true</Public>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Heli_full_small.mwm</Model>
+      <ThrusterType>Ion</ThrusterType>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="1000" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="0.50" />
+		<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="0.50" EndY="3.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="2.50" EndX="3.00" EndY="3.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="2.50" EndX="3.00" EndY="3.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="0.50" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" />
+		<MountPoint Side="Front" StartX="2.50" StartY="0.00" EndX="3.00" EndY="3.00" />
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="0.50" EndY="3.00" />
+		<MountPoint Side="Back" StartX="2.50" StartY="0.00" EndX="3.00" EndY="3.00" />
+		<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Heli_full_small_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Heli_full_small_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Heli_full_small_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Azari_Warshipengine</BlockPairName>
+      <Center x="1" y="1" z="0" />
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>10</ForceMagnitude>
+      <MaxPowerConsumption>0.000002</MaxPowerConsumption>
+      <MinPowerConsumption>0.000002</MinPowerConsumption>
+      <SlowdownFactor>1</SlowdownFactor>
+      
+      <FlameDamageLengthScale>0</FlameDamageLengthScale>
+      <FlameLengthScale>3</FlameLengthScale>
+      <FlameDamage>0</FlameDamage>
+      <FlameIdleColor>
+        <X>0.10</X>
+        <Y>0.20</Y>
+        <Z>0.95</Z>
+        <W>0.75</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+        <X>0.10</X>
+        <Y>0.20</Y>
+        <Z>0.95</Z>
+        <W>0.75</W>
+      </FlameFullColor>
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>Flame_heli</FlameLengthMaterial>
+      <FlameGlareMaterial>GlareLsThrustSmall</FlameGlareMaterial>
+      <FlameVisibilityDistance>1000</FlameVisibilityDistance>
+      <FlameGlareSize>0.750</FlameGlareSize>
+      <FlameGlareQuerySize>4</FlameGlareQuerySize>
+      <PrimarySound>warship_engine</PrimarySound>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_engine</DestroySound>
+    </Definition>
+
+
+    <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>Azari_scoutengine</SubtypeId>
+      </Id>
+      <DisplayName>Azari Scoutengine</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\thrust.dds</Icon>
+      <Description>Special engines for Azarian Scouts and small attackships</Description>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\ThrustSmall.mwm</Model>
+      <ThrusterType>Ion</ThrusterType>
+      <SilenceableByShipSoundSystem>false</SilenceableByShipSoundSystem>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="750" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="1" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\ThrustSmallConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\ThrustSmallConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ThrustSmallConstruction_3.mwm" />
+      </BuildProgressModels>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>Volumetric</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Volumetric</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Azari_scoutengine</BlockPairName>
+      <Center x="0" y="0" z="1" />
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>10</ForceMagnitude>
+      <MaxPowerConsumption>0.000002</MaxPowerConsumption>
+      <MinPowerConsumption>0.000002</MinPowerConsumption>
+      <SlowdownFactor>1</SlowdownFactor>
+      
+      <FlameDamageLengthScale>0</FlameDamageLengthScale>
+      <FlameLengthScale>3</FlameLengthScale>
+      <FlameDamage>0</FlameDamage>
+      <FlameIdleColor>
+        <X>0.10</X>
+        <Y>0.20</Y>
+        <Z>0.95</Z>
+        <W>0.75</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+        <X>0.10</X>
+        <Y>0.20</Y>
+        <Z>0.95</Z>
+        <W>0.75</W>
+      </FlameFullColor>
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>Flame_heli</FlameLengthMaterial>
+      <FlameGlareMaterial>GlareLsThrustSmall</FlameGlareMaterial>
+      <FlameVisibilityDistance>1000</FlameVisibilityDistance>
+      <FlameGlareSize>0.100</FlameGlareSize>
+      <FlameGlareQuerySize>4</FlameGlareQuerySize>
+      <PrimarySound>scout_engine</PrimarySound>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_engine</DestroySound>
+    </Definition>
+	</CubeBlocks>
+</Definitions>

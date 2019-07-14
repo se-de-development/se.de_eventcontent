@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Components>
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>Azari_Pulserifle</SubtypeId>
+      </Id>
+      <DisplayName>Azari Pulserifle</DisplayName>
+      <Icon>Textures\GUI\Icons\Azari_Pulserifle4.dds</Icon>
+      <Description>Standard firearm of the Azarian Forces</Description>
+      <Size>
+        <X>0.1</X>
+        <Y>0.8</Y>
+        <Z>0.05</Z>
+      </Size>
+      <Mass>10</Mass>
+      <Volume>10</Volume>
+      <Model>Models\Weapons\BattleRifle.mwm</Model>
+      <MaxIntegrity>1</MaxIntegrity>
+      <DropProbability>1</DropProbability>
+    </Component>
+    <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>Azari_Controlchip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Controlchip</DisplayName>
+      <Icon>Textures\GUI\Icons\chip.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.05</Z>
+      </Size>
+      <Mass>1</Mass>
+      <Volume>0.5</Volume>
+      <Model>Models\Components\display_component.mwm</Model>
+      <MaxIntegrity>1</MaxIntegrity>
+      <DropProbability>0.5</DropProbability>
+    </Component>
+      <Component>
+      <Id>
+        <TypeId>Component</TypeId>
+        <SubtypeId>Azari_dogtag</SubtypeId>
+      </Id>
+      <DisplayName>Azari Dogtag</DisplayName>
+      <Icon>Textures\GUI\Icons\dogtag_pilot_glow.dds</Icon>
+      <Size>
+        <X>0.3</X>
+        <Y>1.0</Y>
+        <Z>0.2</Z>
+      </Size>
+	  <Model>Models\AzariBackpack.mwm</Model>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <MaxIntegrity>30</MaxIntegrity>
+      <DropProbability>0.5</DropProbability>
+      <Health>18</Health>
+    </Component>
+  </Components>
+</Definitions>
+
+

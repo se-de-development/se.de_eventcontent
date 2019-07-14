@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>Azari_Soldier</SubtypeId>
+      </Id>
+      <DisplayName>Azari Soldier</DisplayName>
+      <Icon>Textures\Icons\EngineerSentry.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  	  <Public>true</Public>
+	  <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\EngineerTurretBaseLB.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+	  <Components>
+        <Component Subtype="Azari_Pulserifle" Count="1" />
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="150" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>Azari_Soldier</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <WeaponDefinitionId Subtype="weapon_Azari_Soldier" />
+      <InventoryMaxVolume>0.384</InventoryMaxVolume>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-17</MinElevationDegrees>
+      <MaxElevationDegrees>40</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <IdleRotation>true</IdleRotation>
+      <MaxRangeMeters>600</MaxRangeMeters>
+      <RotationSpeed>0.02</RotationSpeed>
+      <ElevationSpeed>0.02</ElevationSpeed>
+	  <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <MinFov>0.09</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+    </Definition>
+</CubeBlocks>
+   <Weapons> 
+    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>weapon_Azari_Soldier</SubtypeId>
+      </Id>
+	  <ProjectileAmmoData RateOfFire="600" ShootSoundName="wep_antiair" ShotsInBurst="30" />
+      <NoAmmoSoundName>WepPlayRifleNoAmmo</NoAmmoSoundName>
+      <DeviateShotAngle>0.9</DeviateShotAngle>
+      <ReleaseTimeAfterFire>50</ReleaseTimeAfterFire>
+      <MuzzleFlashLifeSpan>100</MuzzleFlashLifeSpan>
+      <UseDefaultMuzzleFlash>false</UseDefaultMuzzleFlash>
+      <RangeMultiplier>0.1</RangeMultiplier>
+      <UseRandomizedRange>false</UseRandomizedRange>
+      <Effects>
+        <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="Muzzle_Flash" Loop="true" InstantStop="true"/>
+        <Effect Action="Shoot" Dummy="Shell_Casings" Particle="Shell_Casings" InstantStop="false"/>
+      </Effects>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="Azari_Soldier_clip" />
+      </AmmoMagazines>
+      <ReloadTime>3000</ReloadTime>
+    </Weapon>
+  </Weapons>
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>Azari_Soldier_clip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Soldier Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Size>
+        <X>0.2</X>
+        <Y>0.05</Y>
+        <Z>0.02</Z>
+      </Size>
+      <Mass>0.45</Mass>
+      <Volume>0.2</Volume>
+      <Model>Models\Weapons\Ammo_Box.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>300</Capacity>
+      <AmmoDefinitionId Subtype="Azari_Soldier_projectile" />
+    </AmmoMagazine>
+  </AmmoMagazines>
+  <Ammos>
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>Azari_Soldier_projectile</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>200</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>500</MaxTrajectory>
+        <BackkickForce>3.2</BackkickForce>
+        <PhysicalMaterial>RifleBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.7</ProjectileTrailScale>
+        <ProjectileHitImpulse>1</ProjectileHitImpulse>
+        <ProjectileMassDamage>30</ProjectileMassDamage>
+        <ProjectileHealthDamage>24</ProjectileHealthDamage>
+        <HeadShot>true</HeadShot>
+        <ProjectileHeadShotDamage>60</ProjectileHeadShotDamage>
+		<ProjectileTrailProbability>1</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+  </Ammos> 
+</Definitions>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CubeBlocks>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>Azari_shelf_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Ammo Shelf</DisplayName>
+      <Icon>Textures\Icons\hmcargoshelf-centered.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargoshelf-centered_Large.mwm</Model>
+      <UseModelIntersection>false</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="3" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_heavycannon_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="7" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>Azari_antiair_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="5" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_smallcannon_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="8" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_pointdefense_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_shelf_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>Azari_shelf-offset_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Heavy Ammo Shelf</DisplayName>
+      <Icon>Textures\Icons\hmcargoshelf-offset.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargoshelf-offset_Large.mwm</Model>
+      <UseModelIntersection>false</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="8" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_heavycannon_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="1" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>Azari_antiair_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="2" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_smallcannon_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="AmmoClip" Count="2" >
+          <DeconstructId>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>lanthan_pointdefense_clip</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_shelf-offset_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azari_barrels_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Barrels</DisplayName>
+      <Icon>Textures\Icons\hmcargobarrels.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargobarrels_Large.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_barrels_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <InventorySize>
+        <X>5</X>
+        <Y>5</Y>
+        <Z>5</Z>
+      </InventorySize>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azari_barrels-offset_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Barrels</DisplayName>
+      <Icon>Textures\Icons\hmcargobarrels-offset.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>	  
+	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargobarrels-offset_Large.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_barrels-offset_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <InventorySize>
+        <X>5</X>
+        <Y>5</Y>
+        <Z>5</Z>
+      </InventorySize>
+    </Definition>
+
+
+    <Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azari_boxes_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Cargo Boxes</DisplayName>
+      <Icon>Textures\Icons\hmcargoboxes.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>	
+	  <Public>true</Public>	  
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargoboxes_Large.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_boxes_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <InventorySize>
+        <X>5</X>
+        <Y>5</Y>
+        <Z>5</Z>
+      </InventorySize>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>Azari_pallet1_Large</SubtypeId>
+      </Id>
+      <DisplayName>Azari Nadium Plates</DisplayName>
+      <Icon>Textures\Icons\hmcargopallet1.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  <Public>true</Public>	  
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\hmcargopallet1_Large.mwm</Model>
+      <UseModelIntersection>false</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+		<Component Subtype="Nadium_steelplate" Count="50" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Nadium_steelplate</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="500" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BlockPairName>Azari_pallet1_Large</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+    </Definition>
+
+  </CubeBlocks>
+
+ </Definitions>

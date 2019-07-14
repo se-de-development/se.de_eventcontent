@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlueprintClasses>
+	<Class>
+      <Id>
+        <TypeId>BlueprintClassDefinition</TypeId>
+        <SubtypeId>Event_Assembler</SubtypeId>
+      </Id>
+      <Icon>Textures\GUI\Icons\buttons\Character.dds</Icon>
+      <HighlightIcon>Textures\GUI\Icons\buttons\CharacterHighlight.dds</HighlightIcon>
+      <InputConstraintIcon>Textures\GUI\Icons\FilterComponent.dds</InputConstraintIcon>
+      <OutputConstraintIcon>Textures\GUI\Icons\FilterComponent.dds</OutputConstraintIcon>
+    </Class>
+  </BlueprintClasses>
+  <BlueprintClassEntries>
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_Azari_Pulserifle" />
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_Azari_Dogtag" />
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_Azari_Chip" />
+	<Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_heavycannon_clip" />
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_antiair_clip" />
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_fusion_clip" />	
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_pointdefense_clip" />	
+    <Entry Class="Event_Assembler" BlueprintSubtypeId="Trade_smallcannon_clip" />
+  </BlueprintClassEntries>
+</Definitions>

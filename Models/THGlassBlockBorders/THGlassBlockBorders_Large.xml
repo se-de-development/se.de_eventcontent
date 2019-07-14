@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model Name="THGlassBlockBorders">
+	<Parameter Name="RescaleFactor">1.0</Parameter>
+	<Parameter Name="RescaleToLengthInMeters">false</Parameter>
+	<Parameter Name="Centered">false</Parameter>
+	<Parameter Name="SpecularPower">0.0</Parameter>
+	<Parameter Name="SpecularShininess">0.0</Parameter>
+	<Material Name="GlassInside2">
+		<Parameter Name="Technique">GLASS</Parameter>
+		<Parameter Name="SpecularIntensity">0.0</Parameter>
+		<Parameter Name="SpecularPower">0.0</Parameter>
+		<Parameter Name="DiffuseColorX">255</Parameter>
+		<Parameter Name="DiffuseColorY">255</Parameter>
+		<Parameter Name="DiffuseColorZ">255</Parameter>
+		<Parameter Name="GlassMaterialCCW">GlassOutside_cm.dds</Parameter>
+		<Parameter Name="GlassMaterialCW">GlassInside_cm.dds</Parameter>
+		<Parameter Name="GlassSmooth">True</Parameter>
+		<!--material has no DiffuseTexture-->
+		<!--material has no NormalTexture-->
+		<Parameter Name="ColorMetalTexture">Textures\THGlassBlock\Particals\GlassInside_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\THGlassBlock\Particals\GlassInside_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\THGlassBlock\Particals\GlassInside_add.dds</Parameter>
+		<!--material has no AlphamaskTexture-->
+	</Material>
+	<Material Name="GlassOutside2">
+		<Parameter Name="Technique">GLASS</Parameter>
+		<Parameter Name="SpecularIntensity">0.0</Parameter>
+		<Parameter Name="SpecularPower">0.0</Parameter>
+		<Parameter Name="DiffuseColorX">255</Parameter>
+		<Parameter Name="DiffuseColorY">255</Parameter>
+		<Parameter Name="DiffuseColorZ">255</Parameter>
+		<Parameter Name="GlassMaterialCCW">GlassOutside_cm.dds</Parameter>
+		<Parameter Name="GlassMaterialCW">GlassInside_cm.dds</Parameter>
+		<Parameter Name="GlassSmooth">True</Parameter>
+		<!--material has no DiffuseTexture-->
+		<!--material has no NormalTexture-->
+		<Parameter Name="ColorMetalTexture">Textures\THGlassBlock\Particals\GlassOutside_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\THGlassBlock\Particals\GlassOutside_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\THGlassBlock\Particals\GlassOutside_add.dds</Parameter>
+		<!--material has no AlphamaskTexture-->
+	</Material>
+	<Material Name="Chrome">
+		<Parameter Name="Technique">MESH</Parameter>
+		<Parameter Name="SpecularIntensity">0.0</Parameter>
+		<Parameter Name="SpecularPower">0.0</Parameter>
+		<Parameter Name="DiffuseColorX">255</Parameter>
+		<Parameter Name="DiffuseColorY">255</Parameter>
+		<Parameter Name="DiffuseColorZ">255</Parameter>
+		<!--material has no DiffuseTexture-->
+		<!--material has no NormalTexture-->
+		<Parameter Name="ColorMetalTexture">Textures\THGlassBlock\THGlassBlockBorders\Chrome_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\THGlassBlock\THGlassBlockBorders\Chrome_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\THGlassBlock\THGlassBlockBorders\Chrome_add.dds</Parameter>
+		<!--material has no AlphamaskTexture-->
+	</Material>
+	<LOD Distance="10">
+		<Model>Models\THGlassBlockBorders\THGlassBlockBorders_Large_LOD1</Model>
+	</LOD>
+	<LOD Distance="30">
+		<Model>Models\THGlassBlockBorders\THGlassBlockBorders_Large_LOD2</Model>
+	</LOD>
+	<LOD Distance="50">
+		<Model>Models\THGlassBlockBorders\THGlassBlockBorders_Large_LOD3</Model>
+	</LOD>
+</Model>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>#lanthan_heavycannon</SubtypeId>
+      </Id>
+      <DisplayName>Azari Heavy Cannon</DisplayName>
+      <Icon>Textures\Icons\OKI230mmBC_Turret.dds</Icon>
+	  <Description>Azari Heavy Cannon</Description>
+      <CubeSize>Large</CubeSize>
+	  <Public>true</Public>
+	  <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>models\Turret\OKI122mmBCmount.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+	  <Components>
+        <Component Subtype="composite_plate" Count="1" >
+          <DeconstructId>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Azari_Controlchip</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="Computer" Count="1" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+        <Component Subtype="composite_plate" Count="750" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+	  </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+		<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.10" File="models\Turret\OKI230mmBCprogress0.mwm"/>
+        <Model BuildPercentUpperBound="0.15" File="models\Turret\OKI230mmBCprogress1.mwm"/>
+        <Model BuildPercentUpperBound="0.20" File="models\Turret\OKI230mmBCprogress2.mwm"/>
+        <Model BuildPercentUpperBound="1.0" File="models\Turret\OKI230mmBCprogress3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>#lanthan_heavycannon</BlockPairName>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="weapon_lanthan_heavycannon" />
+      <InventoryMaxVolume>1.6</InventoryMaxVolume>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees> 
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-135</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>135</MaxAzimuthDegrees>
+      <RotationSpeed>0.0005</RotationSpeed>
+      <ElevationSpeed>0.0005</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <!--<AiEnabled>true</AiEnabled>-->
+      <MaxRangeMeters>5000</MaxRangeMeters>
+      <DeformationRatio>0</DeformationRatio>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_engine</DestroySound>
+      <PCU>900</PCU>
+    </Definition>
+  </CubeBlocks>
+   <Weapons> 
+    <Weapon>
+      <Id>
+        <TypeId>WeaponDefinition</TypeId>
+        <SubtypeId>weapon_lanthan_heavycannon</SubtypeId>
+      </Id>
+      <MissileAmmoData RateOfFire="30" ShootSoundName="plasma_heavy" ShotsInBurst="1" />
+      <ReleaseTimeAfterFire>125</ReleaseTimeAfterFire>
+	    <DeviateShotAngle>0.2</DeviateShotAngle>
+      <MuzzleFlashLifeSpan>1000</MuzzleFlashLifeSpan>
+      <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+      <UseDefaultMuzzleFlash>false</UseDefaultMuzzleFlash>
+      <Effects>
+        <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="BlockDestroyedExplosion_Small" Loop="false" InstantStop="false"/>
+      </Effects>
+      <AmmoMagazines>
+        <AmmoMagazine Subtype="lanthan_heavycannon_clip" />
+      </AmmoMagazines>
+      <ReloadTime>2000</ReloadTime>
+    </Weapon>
+  </Weapons>
+  <AmmoMagazines>
+    <AmmoMagazine>
+      <Id>
+        <TypeId>AmmoMagazine</TypeId>
+        <SubtypeId>lanthan_heavycannon_clip</SubtypeId>
+      </Id>
+      <DisplayName>Azari Cannon Clip</DisplayName>
+      <Icon>Textures\Icons\AzariAmmo_red.dds</Icon>
+      <Size>
+        <X>0.25</X>
+        <Y>0.2</Y>
+        <Z>0.2</Z>
+      </Size>
+      <Mass>8</Mass>
+      <Volume>8</Volume>
+      <Model>Models\Weapons\Ammo_Box.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>100</Capacity>
+      <AmmoDefinitionId Subtype="lanthan_heavycannon_missle" />
+    </AmmoMagazine>
+  </AmmoMagazines>
+  <Ammos>
+    <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>lanthan_heavycannon_missle</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>600</DesiredSpeed>
+        <SpeedVariance>5</SpeedVariance>
+        <MaxTrajectory>3000</MaxTrajectory>
+        <IsExplosive>true</IsExplosive>
+        <BackkickForce>1500</BackkickForce>
+        <PhysicalMaterial>Missile</PhysicalMaterial>
+      </BasicProperties>
+      <MissileProperties>
+        <MissileMass>10</MissileMass>
+        <MissileExplosionRadius>20</MissileExplosionRadius>
+        <MissileModelName>Models\Cubes\Large\gblock01red.mwm</MissileModelName>
+        <MissileAcceleration>600</MissileAcceleration>
+        <MissileInitialSpeed>100</MissileInitialSpeed>
+        <MissileSkipAcceleration>true</MissileSkipAcceleration>
+        <MissileExplosionDamage>250</MissileExplosionDamage>
+      </MissileProperties>
+    </Ammo>
+  </Ammos> 
+</Definitions>

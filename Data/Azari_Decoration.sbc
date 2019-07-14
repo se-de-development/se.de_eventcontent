@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01blue</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock blue</DisplayName>
+      <Icon>Textures\Icons\gblock01blue.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01blue.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01bluen</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01cyan</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock cyan</DisplayName>
+      <Icon>Textures\Icons\gblock01cyan.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01cyan.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+	    <Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01cyan</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01green</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock green</DisplayName>
+      <Icon>Textures\Icons\gblock01green.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01green.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01greenn</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01orange</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock orange</DisplayName>
+      <Icon>Textures\Icons\gblock01orange.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01orange.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01orangen</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01pink</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock pink</DisplayName>
+      <Icon>Textures\Icons\gblock01pink.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01pink.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01pinkn</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01red</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock red</DisplayName>
+      <Icon>Textures\Icons\gblock01red.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01red.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01redn</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01white</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock white</DisplayName>
+      <Icon>Textures\Icons\gblock01white.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01white.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+	    <Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01whiten</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>gblock01yellow</SubtypeId>
+      </Id>
+      <DisplayName>Azari Glowblock yellow</DisplayName>
+      <Icon>Textures\Icons\gblock01yellow.dds</Icon>
+      <CubeSize>Large</CubeSize>
+	  <GuiVisible>false</GuiVisible>
+	  	  <Public>true</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\gblock01yellow.mwm</Model>
+	  <Components>
+        <Component Subtype="composite_plate" Count="200" >
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Unknown_Element</SubtypeId>
+          </DeconstructId>
+        </Component>
+      </Components>
+      <CriticalComponent Subtype="composite_plate" Index="0" />
+      <BuildProgressModels>
+	    <Model BuildPercentUpperBound="0.10" File="Models\Cubes\Large\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>gblock01yellown</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BuildTimeSeconds>8</BuildTimeSeconds>
+      <DisassembleRatio>2.5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <DestroyEffect>Explosion_Warhead_50</DestroyEffect>
+      <DestroySound>explosion_big_004</DestroySound>
+    </Definition>
+  </CubeBlocks>
+  <BlockPositions>
+
+  </BlockPositions>
+</Definitions>
