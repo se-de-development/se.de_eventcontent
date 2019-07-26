@@ -13,7 +13,7 @@ ___
 
 ### Content
 
-| Command |
+| Content summary |
 | ------- |
 | Strong armorblocks and powerful engines|
 | Faster and stronger weapons|
